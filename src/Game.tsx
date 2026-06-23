@@ -26,8 +26,9 @@ function Game(props: GameProps) {
     future: [],
   });
 
-  function applyMove(matchId: number, winner: Player): GameHistory {
+  function applyMove(winner: Player): GameHistory {
     // Verify the move is valid
+    const matchId = gameHistory.present.currentMatch;
     const match = gameHistory.present.matches[matchId];
     const nextMatch = gameHistory.present.matches[match.nextMatch];
     if (match.player1 !== winner && match.player2 !== winner) {
@@ -65,15 +66,21 @@ function Game(props: GameProps) {
     return newGameHistory;
   }
 
-  function submitMatchResult(matchId: number, winner: Player): void {
-    setGameHistory(applyMove(matchId, winner));
+  function submitMatchResult(winner: Player): void {
+    setGameHistory(applyMove(winner));
   }
 
   return (
     <>
       <GameNav />
       {showBracket && <Bracket gameState={gameHistory.present} showMatchup={() => setShowBracket(false)} />}
-      {!showBracket && <Matchup gameState={gameHistory.present} showBracket={() => setShowBracket(true)} />}
+      {!showBracket && (
+        <Matchup
+          gameState={gameHistory.present}
+          submitMatchResult={submitMatchResult}
+          showBracket={() => setShowBracket(true)}
+        />
+      )}
     </>
   );
 }

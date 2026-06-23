@@ -1,9 +1,10 @@
 import './Matchup.css';
-import type { GameState } from './types';
+import type { GameState, Player } from './types';
 
 type MatchupProps = {
   gameState: GameState;
   showBracket: () => void;
+  submitMatchResult: (player: Player) => void;
 };
 
 function Matchup(props: MatchupProps) {
