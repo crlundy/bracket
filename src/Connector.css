@@ -1,0 +1,98 @@
+.connectors {
+  width: var(--bracket-connector-width);
+}
+
+.connector {
+  border: 2px solid black;
+  border-left: none;
+  margin-top: calc(var(--border-width) / -2);
+  position: relative;
+  width: calc(var(--bracket-connector-width) / 2);
+
+  &::after {
+    border-top: inherit;
+    content: '';
+    left: calc(100% + var(--border-width));
+    position: absolute;
+    top: 50%;
+    width: calc(100% + var(--border-width));
+  }
+}
+
+.connectors-1 {
+  margin-top: calc(
+    1 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--bracket-player-spacing) / 2
+  );
+
+  .connector {
+    height: calc(2 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) + var(--border-width));
+
+    &:not(:last-child) {
+      margin-bottom: calc(var(--bracket-player-height) * 2 + var(--bracket-player-spacing) - var(--border-width) / 2);
+    }
+  }
+}
+
+.connectors-2 {
+  margin-top: calc(
+    2 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--bracket-player-spacing) / 2
+  );
+
+  .connector {
+    height: calc(4 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) + var(--border-width));
+
+    &:not(:last-child) {
+      margin-bottom: calc(
+        4 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--border-width) / 2
+      );
+    }
+  }
+}
+
+.connectors-3 {
+  margin-top: calc(
+    4 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--bracket-player-spacing) / 2
+  );
+
+  .connector {
+    height: calc(8 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) + var(--border-width));
+
+    &:not(:last-child) {
+      margin-bottom: calc(
+        8 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--border-width) / 2
+      );
+    }
+  }
+}
+
+.connectors-4 {
+  margin-top: calc(
+    8 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--bracket-player-spacing) / 2
+  );
+
+  .connector {
+    height: calc(16 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) + var(--border-width));
+
+    &:not(:last-child) {
+      margin-bottom: calc(
+        16 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--border-width) / 2
+      );
+    }
+  }
+}
+
+.connectors-5 {
+  margin-top: calc(
+    16 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--bracket-player-spacing) / 2
+  );
+
+  .connector {
+    height: calc(32 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) + var(--border-width));
+
+    &:not(:last-child) {
+      margin-bottom: calc(
+        32 * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2) - var(--border-width) / 2
+      );
+    }
+  }
+}

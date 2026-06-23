@@ -1,0 +1,48 @@
+.bracket-matchup {
+  height: calc(2 * var(--bracket-player-height));
+}
+
+.player {
+  align-items: stretch;
+  display: flex;
+  height: 50%;
+}
+
+.player:first-child {
+  border-bottom: calc(var(--border-width) / 2) solid black;
+}
+
+.player:last-child {
+  border-top: calc(var(--border-width) / 2) solid black;
+}
+
+.player.eliminated {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.player-name,
+.player-seed {
+  align-items: center;
+  display: flex;
+  padding: 0 0.4rem;
+}
+
+.player-seed {
+  background-color: black;
+  color: #f0e1d2;
+  flex: 0 0 2.1rem;
+  justify-content: flex-end;
+  font-family: 'Chivo Mono', monospace;
+}
+
+.player-name {
+  background-color: rgba(255, 255, 255, 0.2);
+  flex: 1;
+  min-width: 0;
+}
+
+.player-name span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

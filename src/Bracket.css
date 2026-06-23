@@ -1,0 +1,75 @@
+.bracket {
+  background-color: var(--bracket-background);
+  display: flex;
+  padding: 1rem;
+  position: relative;
+}
+
+.bracket-matchup {
+  border: 2px solid black;
+  box-shadow: black 3px 3px;
+  width: var(--bracket-player-width);
+}
+
+.round-1 {
+  .bracket-matchup:not(:last-child) {
+    margin-bottom: var(--bracket-player-spacing);
+  }
+}
+
+.round-2 {
+  margin-top: calc((2 - 1) * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2));
+
+  .bracket-matchup:not(:last-child) {
+    margin-bottom: calc(
+      2 * (var(--bracket-player-height) * 2 + var(--bracket-player-spacing)) - var(--bracket-player-height) * 2
+    );
+  }
+}
+
+.round-3 {
+  margin-top: calc((4 - 1) * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2));
+
+  .bracket-matchup:not(:last-child) {
+    margin-bottom: calc(
+      4 * (var(--bracket-player-height) * 2 + var(--bracket-player-spacing)) - var(--bracket-player-height) * 2
+    );
+  }
+}
+
+.round-4 {
+  margin-top: calc((8 - 1) * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2));
+
+  .bracket-matchup:not(:last-child) {
+    margin-bottom: calc(
+      8 * (var(--bracket-player-height) * 2 + var(--bracket-player-spacing)) - var(--bracket-player-height) * 2
+    );
+  }
+}
+
+.round-5 {
+  margin-top: calc((16 - 1) * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2));
+
+  .bracket-matchup:not(:last-child) {
+    margin-bottom: calc(
+      16 * (var(--bracket-player-height) * 2 + var(--bracket-player-spacing)) - var(--bracket-player-height) * 2
+    );
+  }
+}
+
+.round-6 {
+  margin-top: calc((32 - 1) * (var(--bracket-player-height) + var(--bracket-player-spacing) / 2));
+
+  .bracket-matchup:not(:last-child) {
+    margin-bottom: calc(
+      32 * (var(--bracket-player-height) * 2 + var(--bracket-player-spacing)) - var(--bracket-player-height) * 2
+    );
+  }
+}
+
+#bracket-action-button {
+  bottom: 5vh;
+  font-size: 2rem;
+  right: 10vw;
+  position: fixed;
+}
