@@ -1,5 +1,5 @@
 import './Menu.css';
-import tournaments from './tournaments';
+import tournaments from './tournaments.ts';
 
 type MenuProps = {
   setGameId: (id: number) => void;
@@ -13,16 +13,18 @@ function Menu(props: MenuProps) {
   }
 
   return (
-    <main className="menu">
-      <h1>Bracket Game</h1>
-      <div className="tournament-list">
-        {tournaments.map((value, index) => {
-          return (
-            <div key={index} role="button" className="button tournament-button" onClick={() => chooseGame(index)}>
-              {value.title}
-            </div>
-          );
-        })}
+    <main>
+      <div className="menu">
+        <h1>Bracket Game</h1>
+        <div className="tournament-list">
+          {tournaments.map((value, index) => {
+            return (
+              <div key={index} role="button" className="button tournament-button" onClick={() => chooseGame(index)}>
+                {value.title}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </main>
   );

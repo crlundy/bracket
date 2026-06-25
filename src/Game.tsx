@@ -1,5 +1,4 @@
 import './Game.css';
-import GameNav from './GameNav.tsx';
 import Bracket from './Bracket.tsx';
 import Matchup from './Matchup.tsx';
 import { useState } from 'react';
@@ -72,7 +71,6 @@ function Game(props: GameProps) {
 
   return (
     <>
-      <GameNav />
       {showBracket && <Bracket gameState={gameHistory.present} showMatchup={() => setShowBracket(false)} />}
       {!showBracket && (
         <Matchup

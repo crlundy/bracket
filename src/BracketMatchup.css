@@ -1,33 +1,36 @@
 .bracket-matchup {
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.8) 4px 4px;
   height: calc(2 * var(--bracket-player-height));
+  width: var(--bracket-player-width);
 }
 
-.player {
+.bracket-player {
   align-items: stretch;
   display: flex;
   height: 50%;
+
+  &:first-child {
+    border-bottom: calc(var(--border-width) / 2) solid black;
+  }
+
+  &:last-child {
+    border-top: calc(var(--border-width) / 2) solid black;
+  }
+
+  .eliminated {
+    color: rgba(0, 0, 0, 0.4);
+  }
 }
 
-.player:first-child {
-  border-bottom: calc(var(--border-width) / 2) solid black;
-}
-
-.player:last-child {
-  border-top: calc(var(--border-width) / 2) solid black;
-}
-
-.player.eliminated {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.player-name,
-.player-seed {
+.bracket-player-name,
+.bracket-player-seed {
   align-items: center;
   display: flex;
   padding: 0 0.4rem;
 }
 
-.player-seed {
+.bracket-player-seed {
   background-color: black;
   color: #f0e1d2;
   flex: 0 0 2.1rem;
@@ -35,13 +38,13 @@
   font-family: 'Chivo Mono', monospace;
 }
 
-.player-name {
+.bracket-player-name {
   background-color: rgba(255, 255, 255, 0.2);
   flex: 1;
   min-width: 0;
 }
 
-.player-name span {
+.bracket-player-name span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

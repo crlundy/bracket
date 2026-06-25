@@ -1,4 +1,5 @@
 .connectors {
+  flex: 0 0 auto;
   width: var(--bracket-connector-width);
 }
 

@@ -1,0 +1,20 @@
+.matchup-player {
+  flex: 0 1 auto;
+  width: 50%;
+}
+
+.player-card {
+  align-items: center;
+  background-color: white;
+  border-radius: 5rem;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.player-card-name {
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 4rem;
+  text-align: center;
+}

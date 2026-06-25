@@ -1,0 +1,6 @@
+nav {
+  background: red;
+  flex: 0 0 auto;
+  height: 4rem;
+  position: sticky;
+}

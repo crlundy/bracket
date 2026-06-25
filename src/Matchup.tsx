@@ -1,4 +1,6 @@
 import './Matchup.css';
+import GameNav from './GameNav.tsx';
+import MatchupPlayer from './MatchupPlayer.tsx';
 import type { GameState, Player } from './types';
 
 type MatchupProps = {
@@ -18,7 +20,17 @@ function Matchup(props: MatchupProps) {
     throw new Error(`Match #${matchIndex} does not have 2 players.`);
   }
 
-  return <div>Matchup</div>;
+  return (
+    <>
+      <GameNav />
+      <main>
+        <div className="matchup">
+          <MatchupPlayer info={player1} onWinHandler={() => props.submitMatchResult(player1)} />
+          <MatchupPlayer info={player2} onWinHandler={() => props.submitMatchResult(player2)} />
+        </div>
+      </main>
+    </>
+  );
 }
 
 export default Matchup;

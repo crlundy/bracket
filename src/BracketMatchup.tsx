@@ -12,19 +12,19 @@ function BracketMatchup(props: BracketProps) {
 
   return (
     <div className="bracket-matchup">
-      <div className={`player ${player2 === winner ? 'eliminated' : ''}`}>
-        <div className="player-seed">
+      <div className={`bracket-player ${player2 === winner ? 'eliminated' : ''}`}>
+        <div className="bracket-player-seed">
           <span>{player1 ? player1.seed : ''}</span>
         </div>
-        <div className="player-name">
+        <div className="bracket-player-name">
           <span>{player1 ? player1.name : ''}</span>
         </div>
       </div>
-      <div className={`player ${player1 === winner ? 'eliminated' : ''}`}>
-        <div className="player-seed">
+      <div className={`bracket-player ${player1 === winner ? 'eliminated' : ''}`}>
+        <div className="bracket-player-seed">
           <span>{player2 ? player2.seed : ''}</span>
         </div>
-        <div className="player-name">
+        <div className="bracket-player-name">
           <span>{player2 ? player2.name : ''}</span>
         </div>
       </div>
