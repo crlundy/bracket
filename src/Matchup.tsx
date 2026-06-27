@@ -1,5 +1,5 @@
 import './Matchup.css';
-import GameNav from './GameNav.tsx';
+import MatchupNav from './MatchupNav.tsx';
 import MatchupPlayer from './MatchupPlayer.tsx';
 import type { GameState, Player } from './types';
 
@@ -7,11 +7,18 @@ type MatchupProps = {
   gameState: GameState;
   showBracket: () => void;
   submitMatchResult: (player: Player) => void;
+  undo: (() => void) | undefined;
 };
 
 function Matchup(props: MatchupProps) {
   const matchIndex = props.gameState.currentMatch;
   const match = props.gameState.matches[matchIndex];
+
+  // Check that the match exists
+  if (match === undefined) {
+    throw new Error(`Match #${matchIndex} does not exist.`);
+  }
+
   const player1 = match.player1;
   const player2 = match.player2;
 
@@ -22,7 +29,7 @@ function Matchup(props: MatchupProps) {
 
   return (
     <>
-      <GameNav />
+      <MatchupNav gameState={props.gameState} showBracket={props.showBracket} undo={props.undo} />
       <main>
         <div className="matchup">
           <MatchupPlayer info={player1} onWinHandler={() => props.submitMatchResult(player1)} />

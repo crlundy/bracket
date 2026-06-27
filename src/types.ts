@@ -7,6 +7,8 @@ type GameHistory = {
 type GameState = {
   currentMatch: number;
   matches: Match[];
+  title: string;
+  winner?: Player;
 };
 
 type Match = {
@@ -18,7 +20,8 @@ type Match = {
 };
 
 type Player = {
-  color?: string;
+  background?: string;
+  foreground?: string;
   image?: string;
   name: string;
   score?: number;
@@ -32,7 +35,8 @@ type Tournament = {
 };
 
 type UnseededPlayer = {
-  color?: string;
+  background?: string;
+  foreground?: string;
   image?: string;
   name: string;
   score?: number;

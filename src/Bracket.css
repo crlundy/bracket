@@ -1,5 +1,5 @@
 .bracket {
-  background-color: var(--bracket-background);
+  background-color: var(--background);
   display: flex;
   min-width: 100%;
   padding: 1rem;
@@ -62,7 +62,17 @@
   }
 }
 
-.bracket-action {
+.bracket-nav {
+  ul {
+    flex: 1 0 auto;
+
+    li:first-child {
+      border-left: none;
+    }
+  }
+}
+
+/* .bracket-action {
   align-items: center;
   background-color: black;
   bottom: 0;
@@ -86,4 +96,4 @@
     background-color: var(--primary-variant);
     cursor: pointer;
   }
-}
+} */

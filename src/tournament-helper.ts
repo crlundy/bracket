@@ -1,3 +1,4 @@
+import colors, { getContrastingColor } from './colors.ts';
 import type { Match, UnseededPlayer, Player } from './types.ts';
 
 const PLAYER_COUNT = 64; // TODO: allow an arbitrary number of elements
@@ -38,17 +39,21 @@ export function createMatches(players: UnseededPlayer[]): Match[] {
     });
   }
 
+  // Make sure each player has a color
+  players.forEach((player, index) => {
+    if (player.background === undefined) {
+      player.background = colors[index];
+      player.foreground = getContrastingColor(colors[index]);
+    }
+  });
+
   // If every player has a score, then we can sort by that
   if (players.every((player) => player.score !== undefined)) {
-    const typed = players as (Player & { score: number })[];
-    typed.sort((a, b) => b.score - a.score);
-    players = typed;
+    (players as (Player & { score: number })[]).sort((a, b) => b.score - a.score);
   }
 
   // Seed the players
-  const seededPlayers = players.map((player, index) => {
-    return { ...player, seed: index + 1 };
-  });
+  const seededPlayers = players.map((player, index) => ({ ...player, seed: index + 1 }));
 
   // Put in the initial round players
   for (let i = 0; i < PLAYER_COUNT / 2; i++) {

@@ -1,8 +1,8 @@
 .matchup {
-  background: black;
+  background: var(--background);
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   height: 100%;
-  padding: 3rem;
+  padding: 4rem;
   width: 100%;
 }

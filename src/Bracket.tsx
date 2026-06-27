@@ -8,14 +8,29 @@ import type { GameState } from './types.ts';
 type BracketProps = {
   gameState: GameState;
   showMatchup: () => void;
+  undo: (() => void) | undefined;
 };
 
 function Bracket(props: BracketProps) {
   const rounds = [1, 2, 3, 4, 5, 6];
   const currentMatchIndex = props.gameState.currentMatch;
-  const currentRound = props.gameState.matches[currentMatchIndex].round;
-  const currentOffset = getRoundOffset(currentRound);
-  const buttonText = currentMatchIndex === currentOffset ? `Start round ${currentRound}` : 'Resume';
+  const getButtonText = (): string => {
+    // If the game is over
+    if (props.gameState.winner) {
+      return 'Play again';
+    }
+
+    const currentRound = props.gameState.matches[currentMatchIndex].round;
+    const currentOffset = getRoundOffset(currentRound);
+
+    // If it's the start of a round
+    if (currentMatchIndex === currentOffset) {
+      return `Start round ${currentRound}`;
+    }
+
+    // Otherwise, use a generic button text
+    return 'Resume';
+  };
 
   return (
     <>
@@ -43,9 +58,18 @@ function Bracket(props: BracketProps) {
           })}
         </div>
       </main>
-      <div className="bracket-action" onClick={props.showMatchup}>
-        <span>{buttonText}</span>
-      </div>
+      <nav className="bracket-nav">
+        <ul>
+          <li className="nav-button nav-button-primary" role="button" onClick={props.showMatchup}>
+            {getButtonText()}
+          </li>
+          {props.undo && (
+            <li className="nav-button" role="button" onClick={props.undo}>
+              Undo
+            </li>
+          )}
+        </ul>
+      </nav>
     </>
   );
 }

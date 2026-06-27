@@ -1,4 +1,5 @@
 import './BracketMatchup.css';
+import BracketMatchupPlayer from './BracketMatchupPlayer.tsx';
 import type { Match } from './types.ts';
 
 type BracketProps = {
@@ -9,25 +10,13 @@ function BracketMatchup(props: BracketProps) {
   const player1 = props.match.player1;
   const player2 = props.match.player2;
   const winner = props.match.winner;
+  const player1Eliminated = player2 !== undefined && winner !== undefined && player2.name === winner.name;
+  const player2Eliminated = player1 !== undefined && winner !== undefined && player1.name === winner.name;
 
   return (
     <div className="bracket-matchup">
-      <div className={`bracket-player ${player2 === winner ? 'eliminated' : ''}`}>
-        <div className="bracket-player-seed">
-          <span>{player1 ? player1.seed : ''}</span>
-        </div>
-        <div className="bracket-player-name">
-          <span>{player1 ? player1.name : ''}</span>
-        </div>
-      </div>
-      <div className={`bracket-player ${player1 === winner ? 'eliminated' : ''}`}>
-        <div className="bracket-player-seed">
-          <span>{player2 ? player2.seed : ''}</span>
-        </div>
-        <div className="bracket-player-name">
-          <span>{player2 ? player2.name : ''}</span>
-        </div>
-      </div>
+      <BracketMatchupPlayer player={player1} isEliminated={player1Eliminated} />
+      <BracketMatchupPlayer player={player2} isEliminated={player2Eliminated} />
     </div>
   );
 }
