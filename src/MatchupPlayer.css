@@ -1,7 +1,7 @@
 .matchup-player {
   align-items: stretch;
   background-color: black;
-  border: 8px solid black;
+  border: var(--matchup-border-width) solid black;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -18,6 +18,10 @@
     cursor: pointer;
     transform: translate(10px, 10px);
   }
+
+  @media (max-height: 500px) {
+    --matchup-border-width: 4px;
+  }
 }
 
 .matchup-player-name {
@@ -25,6 +29,10 @@
   font-weight: 700;
   padding: 4rem;
   text-align: center;
+
+  @media (max-height: 500px) {
+    font-size: 1.8rem;
+  }
 }
 
 .matchup-player-image {
@@ -36,13 +44,17 @@
 
 .has-image {
   &.matchup-player {
-    gap: 8px;
+    gap: var(--matchup-border-width);
     justify-content: flex-end;
   }
 
   .matchup-player-name {
     padding: 2rem 3rem;
     width: 100%;
+
+    @media (max-height: 500px) {
+      padding: 0.4rem 0.7rem;
+    }
   }
 }
 

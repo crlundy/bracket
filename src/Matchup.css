@@ -1,8 +1,12 @@
 .matchup {
   background: var(--background);
   display: flex;
-  gap: 4rem;
+  gap: var(--matchup-padding);
   height: 100%;
-  padding: 4rem;
+  padding: var(--matchup-padding);
   width: 100%;
+
+  @media (max-height: 500px) {
+    --matchup-padding: 2.5rem;
+  }
 }

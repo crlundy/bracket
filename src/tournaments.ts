@@ -151,7 +151,7 @@ const tournaments: Tournament[] = [
           'https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/cec8ab38-9e87-40e9-8419-0c92a4c68b10/compose?format=webp&label=standard_art_vertical_071&width=800',
       },
       {
-        name: 'The Emperor’s New Groove',
+        name: "The Emperor's New Groove",
         score: 86,
         image:
           'https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/a7fc56d2-3afe-458a-a9c3-a8ea0e600572/compose?format=webp&label=standard_art_vertical_071&width=800',
@@ -296,70 +296,242 @@ const tournaments: Tournament[] = [
     title: 'Chips',
     description: 'Brands and flavors of chips',
     players: [
-      { name: 'Doritos Nacho Cheese' },
-      { name: 'Doritos Cool Ranch' },
-      { name: 'Doritos Spicy Nacho' },
-      { name: 'Doritos Spicy Sweet Chili' },
-      { name: 'Doritos Golden Sriracha' },
-      { name: 'Doritos Tapatío' },
-      { name: 'Pringles' },
-      { name: 'Sour Cream & Onion Pringles' },
-      { name: 'Salt & Vinegar Pringles' },
-      { name: 'Pizza Pringles' },
-      { name: 'BBQ Pringles' },
-      { name: 'Honey Mustard Pringles' },
-      { name: 'Extra Hot Chili Lime Pringles' },
-      { name: 'Fritos' },
-      { name: 'Chili Cheese Fritos' },
-      { name: 'Fritos Scoops' },
-      { name: 'Takis Original' },
-      { name: 'Takis Fuego' },
-      { name: 'Classic Lay’s' },
-      { name: 'Barbecue Lay’s' },
-      { name: 'Sour Cream & Onion Lay’s' },
-      { name: 'Salt & Vinegar Lay’s' },
-      { name: 'Baked Lay’s' },
-      { name: 'Wavy Lay’s' },
-      { name: 'Lay’s Stax' },
-      { name: 'Tostitos' },
-      { name: 'Tostitos Scoops' },
-      { name: 'Tostitos Hint of Lime' },
-      { name: 'Mission Tortilla Strips' },
-      { name: 'Late July Tortilla Chips' },
-      { name: 'Cheetos Crunchy' },
-      { name: 'Cheetos Crunchy Flamin’ Hot' },
-      { name: 'Cheetos Puffs' },
-      { name: 'Cheetos Puffs Flamin’ Hot' },
-      { name: 'Chester’s Fries' },
-      { name: 'Ruffles Original' },
-      { name: 'Ruffles Cheddar & Sour Cream' },
-      { name: 'Ruffles Sour Cream & Onion' },
-      { name: 'Ruffles All Dressed' },
-      { name: 'Sun Chips' },
-      { name: 'French Onion Sun Chips' },
-      { name: 'Harvest Cheddar Sun Chips' },
-      { name: 'Garden Salsa Sun Chips' },
-      { name: 'Funyuns' },
-      { name: 'Bugles' },
-      { name: 'Veggie straws' },
-      { name: 'Kettle Potato Chips Sea Salt' },
-      { name: 'Kettle Potato Chips Jalapeño' },
-      { name: 'Kettle Krinkle Cut Potato Chips Salt & Fresh Ground Pepper' },
-      { name: 'Hawaiian Sweet Maui Onion Kettle Style Potato Chips' },
-      { name: 'PopCorners Sea Salt' },
-      { name: 'PopCorners White Cheddar' },
-      { name: 'Stacy’s Simply Naked Pita Chips' },
-      { name: 'Miss Vickie’s Sea Salt' },
-      { name: 'Miss Vickie’s Jalapeño' },
-      { name: 'Miss Vickie’s Dill Pickle' },
-      { name: 'popchips Sea Salt' },
-      { name: 'popchips Barbeque' },
-      { name: 'Cheez-It Snap’d' },
-      { name: 'Terra Classic' },
-      { name: 'Torres Black Truffle' },
-      { name: 'Chili & Lime Flavored Rolled Tortilla Chips' },
-      { name: 'Turtle Chips Sweet Corn Flavor' },
-      { name: 'Turtle Chips Honey Butter Flavor' },
+      { name: 'Doritos Nacho Cheese', image: 'https://www.kroger.com/product/images/xlarge/front/0002840077059' },
+      { name: 'Doritos Cool Ranch', image: 'https://www.kroger.com/product/images/xlarge/front/0002840077056' },
+      {
+        name: 'Doritos Spicy Nacho',
+        image:
+          'https://i5.walmartimages.com/seo/Doritos-Spicy-Nacho-Flavored-Tortilla-Chips-9-75-Oz_66573f19-7a7a-43c9-a2e1-3b76e1a4e37e_1.1f541dfa516cc8c4d2e5556837e7257e.jpeg',
+      },
+      {
+        name: 'Doritos Spicy Sweet Chili',
+        image: 'https://target.scene7.com/is/image/Target/GUEST_e635bcc4-3f35-4579-a7ae-463f28f0af96',
+      },
+      { name: 'Pringles', image: 'https://images.heb.com/is/image/HEBGrocery/002083687-1' },
+      { name: 'Sour Cream & Onion Pringles', image: 'https://products.blains.com/600/122/1227955.jpg' },
+      { name: 'Salt & Vinegar Pringles', image: 'https://pics.walgreens.com/prodimg/595140/900.jpg' },
+      {
+        name: 'Pizza Pringles',
+        image: 'https://target.scene7.com/is/image/Target/GUEST_6cc81e30-ec67-414a-a422-18b9a75cae30',
+      },
+      {
+        name: 'Extra Hot Chili Lime Pringles',
+        image:
+          'https://i5.walmartimages.com/seo/Pringles-Extra-Hot-5-57-Ounce-Pack-of-14_089977e6-4302-4df4-bbd3-42db915532d2.5bc1747bf5bccccb82ec9aaa1a6ac0fe.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF',
+      },
+      {
+        name: 'Fritos The Original',
+        image:
+          'https://i5.walmartimages.com/asr/10d34172-a7dc-4339-9093-0622bf9c7a46.4db12b4bd8590213e9f3ed12291ca584.jpeg',
+      },
+      {
+        name: 'Chili Cheese Fritos',
+        image:
+          'https://i5.walmartimages.com/seo/Fritos-Corn-Chips-Chili-Cheese-Flavored-Snack-Chips-9-25-Ounce-Bag_b598573f-184a-473a-83a0-0bfcfebb03b3.e5a76b7c69da9927f1bab750ec02002e.jpeg',
+      },
+      {
+        name: 'Fritos Scoops',
+        image: 'https://www.fritos.com/sites/fritos.com/files//2020-11/fritos%20scoops%20original.png',
+      },
+      {
+        name: "Fritos Flamin' Hot",
+        image: 'https://target.scene7.com/is/image/Target/GUEST_d9bee0ec-0231-4d0f-a794-a43d42d7d2c6',
+      },
+      {
+        name: 'Fritos Flavor Twists Honey BBQ',
+        image: 'https://www.fritos.com/sites/fritos.com/files//2020-11/Honey%20BBQ%20Twists_3.png',
+      },
+      {
+        name: 'Takis Original',
+        image:
+          'https://tb-static.uber.com/prod/image-proc/processed_images/6618c6943bdb96b59caef9992cc15edf/b4665c191b34baf3d0e0fa45dfdd3d1d.jpeg',
+      },
+      { name: 'Takis Fuego', image: 'https://i.ebayimg.com/images/g/n5cAAeSwvCVpcq-4/s-l400.jpg' },
+      { name: "Classic Lay's", image: 'https://www.kroger.com/product/images/large/left/0002840009085' },
+      {
+        name: "Barbecue Lay's",
+        image:
+          'https://i5.walmartimages.com/seo/Lay-s-Barbecue-Flavored-Potato-Chips-7-77-Ounce-Bag_cf07a4f3-dd02-4b67-a10a-45da17791591.1daa113f1e3129bfd62dc808f93600f3.jpeg',
+      },
+      { name: "Sour Cream & Onion Lay's", image: 'https://www.kroger.com/product/images/xlarge/front/0002840042061' },
+      {
+        name: "Salt & Vinegar Lay's",
+        image:
+          'https://i5.walmartimages.com/seo/Lay-s-Potato-Chips-Salt-Vinegar-Flavored-2-5-oz-Bag_b12693f4-c59e-47be-9188-0d419bd49bb5.70690e7856158494324dc35c722ae220.jpeg',
+      },
+      { name: "Lay's Baked", image: 'https://www.kroger.com/product/images/xlarge/front/0002840033154' },
+      { name: "Wavy Lay's", image: 'https://pics.walgreens.com/prodimg/623966/900.jpg' },
+      {
+        name: "Lay's Stax",
+        image:
+          'https://images.albertsons-media.com/is/image/ABS/960071224-C1N1?$ng-ecom-pdp-mobile$&defaultImage=Not_Available',
+      },
+      {
+        name: 'Tostitos',
+        image:
+          'https://i5.walmartimages.com/seo/Tostitos-Original-Tortilla-Chips-Snack-Chips-12-oz-Bag_31b048bb-5301-4b05-84f9-481ea4a9b54d.81f7210324deb3d8cbafd54c6086c3fc.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF',
+      },
+      {
+        name: 'Tostitos Scoops',
+        image:
+          'https://www.snacks.com/_next/image?url=https%3A%2F%2Fdigitalassets.pepsico.com%2Fm%2F299e66f296d2697a%2FHi_Res-00028400064088_C1C1.jpg&w=3840&q=75',
+      },
+      { name: 'Tostitos Hint of Lime', image: 'https://pics.walgreens.com/prodimg/642068/900.jpg' },
+      {
+        name: 'Mission Tortilla Strips',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_EvVJgypJAiUiLqwNmeoN2bHBTY_YeWSnA&s',
+      },
+      {
+        name: 'Cheetos Crunchy',
+        image:
+          'https://i5.walmartimages.com/seo/Cheetos-Crunchy-Cheese-Flavored-Snack-Chips-8-5-oz-Bag_9ecf4ee8-3337-4405-903e-3dddbf7b8c8f.52e185245be6c83d75ea64cfd9b71363.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF',
+      },
+      { name: "Cheetos Crunchy Flamin' Hot", image: 'https://m.media-amazon.com/images/I/51dLcB7bhRL.jpg' },
+      {
+        name: 'Cheetos Puffs',
+        image: 'https://target.scene7.com/is/image/Target/GUEST_f38e0e8a-44c8-4917-94b5-0ac7ecc07177',
+      },
+      {
+        name: "Cheetos Puffs Flamin' Hot",
+        image:
+          'https://i5.walmartimages.com/seo/Cheetos-Puffs-Flamin-Hot-Cheese-Flavored-Snacks-8-oz-Packaging-may-vary_b8662197-9e98-4c18-8d16-d8200427a025.da7153b44cd173d3c9cf83d77ed94cdc.jpeg',
+      },
+      {
+        name: 'Cheetos Baked Crunchy Cheese',
+        image: 'https://target.scene7.com/is/image/Target/GUEST_c8a3dc58-a668-4664-b931-cbf008514057',
+      },
+      {
+        name: "Cheetos Baked Flamin' Hot",
+        image: 'https://target.scene7.com/is/image/Target/GUEST_6bae63bd-4272-4fab-b3e9-1f8f64e774b3',
+      },
+      {
+        name: "Chester's Fries Flamin' Hot",
+        image:
+          'https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_4ef94d0f-0509-4c48-888f-d030c0d98903.png',
+      },
+      {
+        name: 'Ruffles Original',
+        image:
+          'https://i5.walmartimages.com/seo/Ruffles-Potato-Chips-Original-Snack-Chips-8-5-Ounce-Bag_f23bbb9b-d7b5-4854-af40-d0bdf8240b32.bd09d5c84f3a70b0a0a3dd64011fe654.jpeg',
+      },
+      {
+        name: 'Ruffles Cheddar & Sour Cream',
+        image: 'https://www.kroger.com/product/images/xlarge/front/0002840000291',
+      },
+      {
+        name: 'Ruffles Sour Cream & Onion',
+        image:
+          'https://i5.walmartimages.com/seo/Ruffles-Sour-Cream-Onion-Flavored-Potato-Chips-8-5-Ounce_b10abf78-c2ca-4bba-b064-cd040b6baa81.3f6a244ccde6285d20b5594d16e54d44.jpeg',
+      },
+      {
+        name: 'Ruffles All Dressed',
+        image:
+          'https://images.albertsons-media.com/is/image/ABS/970031884-C1N1?$ng-ecom-pdp-desktop$&defaultImage=Not_Available',
+      },
+      {
+        name: 'Sun Chips Original',
+        image: 'https://washington.bevmo.com/cdn/shop/products/1c033a0b-8e7d-4c8c-8945-38c2648fe6d4.png?v=1698877773',
+      },
+      {
+        name: 'French Onion Sun Chips',
+        image:
+          'https://www.snacks.com/_next/image?url=https%3A%2F%2Fdigitalassets.pepsico.com%2Fm%2F1a8e6f1110905500%2FHi_Res-00028400152242_C1C1.jpg&w=3840&q=75',
+      },
+      {
+        name: 'Harvest Cheddar Sun Chips',
+        image:
+          'https://target.scene7.com/is/image/Target/GUEST_4f4f9f68-a714-4a68-a977-c7797995b9c9?wid=300&hei=300&fmt=pjpeg',
+      },
+      {
+        name: 'Garden Salsa Sun Chips',
+        image: 'https://m.media-amazon.com/images/I/81W8lZY142L._AC_UF894,1000_QL80_.jpg',
+      },
+      { name: 'Funyuns', image: 'https://m.media-amazon.com/images/I/91D2DqydjIL.jpg' },
+      { name: "Funyuns Flamin' Hot", image: 'https://www.kroger.com/product/images/large/front/0002840076821' },
+      {
+        name: 'Bugles',
+        image:
+          'https://storage.googleapis.com/ezimage-cache/noscale/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2NvbnRlbnQuZXphZHR2LmNvbS8yMDI0LzAzLzMxLzIwMjQwMzMxXzY2MDkxM2QzNjBmYjcuanBn.webp',
+      },
+      {
+        name: 'Garden Veggie Straws',
+        image: 'https://m.media-amazon.com/images/I/71ZSwO3bwRL._AC_UF894,1000_QL80_.jpg',
+      },
+      {
+        name: 'Kettle Potato Chips Sea Salt',
+        image: 'https://www.agatavalentina.com/Assets/ProductImages/84114009982-13.jpg',
+      },
+      {
+        name: 'Kettle Potato Chips Jalapeño',
+        image:
+          'https://i5.walmartimages.com/seo/Kettle-Brand-Potato-Chips-Jalapeno-Kettle-Chips-5-oz_17fbad5c-b589-4a0c-a2c5-f1d5ff4098b4.4c3bb2a118c4856155d1ba613b26fa26.jpeg',
+      },
+      {
+        name: 'Kettle Potato Chips Sea Salt & Vinegar',
+        image:
+          'https://images.albertsons-media.com/is/image/ABS/970384838-C1N1?$ng-ecom-pdp-mobile$&defaultImage=Not_Available',
+      },
+      {
+        name: 'Kettle Krinkle Cut Potato Chips Salt & Fresh Ground Pepper',
+        image:
+          'https://images.albertsons-media.com/is/image/ABS/970384839-C1N1?$ng-ecom-pdp-desktop$&defaultImage=Not_Available',
+      },
+      {
+        name: 'Hawaiian Sweet Maui Onion Kettle Style Potato Chips',
+        image: 'https://www.kroger.com/product/images/xlarge/front/0001159416006',
+      },
+      {
+        name: 'PopCorners Sea Salt',
+        image:
+          'https://images.albertsons-media.com/is/image/ABS/960229450-C1N1?$ng-ecom-pdp-mobile$&defaultImage=Not_Available',
+      },
+      {
+        name: 'PopCorners White Cheddar',
+        image:
+          'https://images.albertsons-media.com/is/image/ABS/960225846-C1N1?$ng-ecom-pdp-desktop$&defaultImage=Not_Available',
+      },
+      {
+        name: 'PopCorners Kettle Corn',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQK_qGigdgzQ5v4DhK52WdixKmQ3zj1e0PLg&s',
+      },
+      {
+        name: "Stacy's Simply Naked Pita Chips",
+        image: 'https://www.stacyssnacks.com/sites/stacys.com/files/2024-02/Stacy´s%20Simply%20Naked%202024.png',
+      },
+      {
+        name: "Stacy's Parmesan Garlic & Herb Pita Chips",
+        image: 'https://m.media-amazon.com/images/I/71KkSUqd4CL._AC_UF894,1000_QL80_.jpg',
+      },
+      { name: "Miss Vickie's Sea Salt", image: 'https://m.media-amazon.com/images/I/91EVL+eKaVL.jpg' },
+      {
+        name: "Miss Vickie's Jalapeño",
+        image: 'https://target.scene7.com/is/image/Target/GUEST_89b4f723-ed32-48db-baf7-937ef8c6d3b1',
+      },
+      {
+        name: "Miss Vickie's Spicy Dill Pickle",
+        image:
+          'https://cdn11.bigcommerce.com/s-iys49mn3fh/images/stencil/1280x1280/products/5186477/2099842/725750__53221.1721887841.jpg?c=1',
+      },
+      {
+        name: 'popchips Sea Salt',
+        image:
+          'https://images.albertsons-media.com/is/image/ABS/960284617-C1N1?$ng-ecom-pdp-desktop$&defaultImage=Not_Available',
+      },
+      {
+        name: 'popchips Barbeque',
+        image:
+          'https://i5.walmartimages.com/seo/Popchips-Potato-Snack-Chips-Barbeque-5-oz_cc9beab8-6f2a-4a0d-bcd0-245063087e87.e84570c3249fd7e95ecd64aa76a145e9.png',
+      },
+      {
+        name: 'popchips Sour Cream & Onion',
+        image: 'https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/ppc/ppc50070/y/37.jpg',
+      },
+      { name: 'Terra Original', image: 'https://m.media-amazon.com/images/I/81XaBMmobhL._AC_UF894,1000_QL80_.jpg' },
+      {
+        name: 'Chili & Lime Flavored Rolled Tortilla Chips',
+        image:
+          'https://www.traderjoes.com/content/dam/trjo/products/m21001/61420.png/jcr:content/renditions/cq5dam.web.1280.1280',
+      },
     ],
   },
 ];

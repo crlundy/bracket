@@ -25,6 +25,11 @@ export function getRoundOffset(round: number): number {
 }
 
 export function createMatches(players: UnseededPlayer[]): Match[] {
+  // Verify the players
+  if (players.length !== PLAYER_COUNT) {
+    throw new Error(`Expected ${PLAYER_COUNT} players but ${players.length} were provided.`);
+  }
+
   // New array of matches
   const matches = new Array<Match>();
 
@@ -50,6 +55,10 @@ export function createMatches(players: UnseededPlayer[]): Match[] {
   // If every player has a score, then we can sort by that
   if (players.every((player) => player.score !== undefined)) {
     (players as (Player & { score: number })[]).sort((a, b) => b.score - a.score);
+
+    // Otherwise, just randomize the list
+  } else {
+    players = shuffle(players);
   }
 
   // Seed the players
@@ -63,4 +72,15 @@ export function createMatches(players: UnseededPlayer[]): Match[] {
   }
 
   return matches;
+}
+
+function shuffle<T>(array: T[]): T[] {
+  const result = [...array];
+
+  for (let index = result.length - 1; index > 0; index--) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [result[index], result[randomIndex]] = [result[randomIndex], result[index]];
+  }
+
+  return result;
 }

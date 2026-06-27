@@ -18,18 +18,24 @@ function MatchupNav(props: MatchupNavProps) {
 
   return (
     <nav className="game-nav">
-      <h1>{props.gameState.title}</h1>
+      <h1>
+        <span>{props.gameState.title}</span>
+      </h1>
       <ul>
-        <li>
-          Round {round} – {matchNumberInRound} / {totalMatchesInRound}
-        </li>
-        <li>
-          <div className="progress-bar">
-            <div
-              className="progress-bar-fill"
-              style={{ width: `${(100 * props.gameState.currentMatch) / props.gameState.matches.length}%` }}
-            ></div>
-          </div>
+        <li className="progress">
+          <ul>
+            <li>
+              Round {round} : {matchNumberInRound} / {totalMatchesInRound}
+            </li>
+            <li>
+              <div className="progress-bar">
+                <div
+                  className="progress-bar-fill"
+                  style={{ width: `${(100 * props.gameState.currentMatch) / props.gameState.matches.length}%` }}
+                ></div>
+              </div>
+            </li>
+          </ul>
         </li>
         <li className="nav-button" role="button" onClick={props.showBracket}>
           See bracket

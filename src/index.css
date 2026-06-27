@@ -30,10 +30,13 @@
   --bracket-player-spacing: 16px;
   --bracket-player-width: 250px;
   --main-padding: 1rem;
+  --matchup-border-width: 8px;
+  --matchup-padding: 4rem;
 }
 
 html,
 body {
+  background-color: var(--background);
   height: 100%;
   margin: 0;
   overflow: hidden;
